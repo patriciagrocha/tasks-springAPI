@@ -1,7 +1,7 @@
 package br.com.patriciarocha.todolist.model;
 
-import br.com.patriciarocha.todolist.enums.PriorityEnum;
-import br.com.patriciarocha.todolist.enums.StatusEnum;
+import br.com.patriciarocha.todolist.model.enums.PriorityEnum;
+import br.com.patriciarocha.todolist.model.enums.StatusEnum;
 
 
 import java.time.LocalDate;

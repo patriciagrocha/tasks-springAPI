@@ -1,4 +1,4 @@
-package br.com.patriciarocha.todolist.enums;
+package br.com.patriciarocha.todolist.model.enums;
 
 public enum StatusEnum {
     PENDING,
