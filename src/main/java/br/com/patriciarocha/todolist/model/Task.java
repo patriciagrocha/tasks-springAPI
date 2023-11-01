@@ -1,5 +1,6 @@
 package br.com.patriciarocha.todolist.model;
 
+import br.com.patriciarocha.todolist.database.Database;
 import br.com.patriciarocha.todolist.model.enums.PriorityEnum;
 import br.com.patriciarocha.todolist.model.enums.StatusEnum;
 import br.com.patriciarocha.todolist.model.transport.TaskDTO;
@@ -20,7 +21,7 @@ public class Task {
     public Task() {
     }
     public Task(TaskDTO taskDTO) {
-        this.id = taskDTO.id();
+        this.id = Database.setId();
         this.description = taskDTO.description();
         this.startDate = taskDTO.startDate();
         this.endDate = taskDTO.endDate();

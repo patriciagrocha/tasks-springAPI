@@ -9,6 +9,7 @@ import java.util.List;
 
 public class Database {
 
+    private static Integer nextId = 0;
     private static List<Task> tasks = new ArrayList<>();
 
     public static void add(Task task){
@@ -25,6 +26,9 @@ public class Database {
 
     public Task get(Integer id){
         return Database.tasks.stream().filter(task -> task.getId().equals(id)).findFirst().orElse(null);
+    }
+    public static Integer setId(){
+        return nextId++;
     }
 
 }
