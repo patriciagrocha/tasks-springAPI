@@ -2,6 +2,7 @@ package br.com.patriciarocha.todolist.model;
 
 import br.com.patriciarocha.todolist.model.enums.PriorityEnum;
 import br.com.patriciarocha.todolist.model.enums.StatusEnum;
+import br.com.patriciarocha.todolist.model.transport.TaskDTO;
 
 
 import java.time.LocalDate;
@@ -18,6 +19,16 @@ public class Task {
 
     public Task() {
     }
+    public Task(TaskDTO taskDTO) {
+        this.id = taskDTO.id();
+        this.description = taskDTO.description();
+        this.startDate = taskDTO.startDate();
+        this.endDate = taskDTO.endDate();
+        this.status = taskDTO.status();
+        this.priority = taskDTO.priority();
+        this.assignee = taskDTO.assignee();
+    }
+
     public Task(Integer id, String description, LocalDate startDate, LocalDate endDate,
                 StatusEnum status, PriorityEnum priority, Assignee assignee) {
         this.id = id;
