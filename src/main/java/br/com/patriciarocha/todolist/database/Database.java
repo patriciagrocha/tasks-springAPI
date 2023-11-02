@@ -24,7 +24,7 @@ public class Database {
         return Database.tasks;
     }
 
-    public Task get(Integer id){
+    public static Task get(Integer id){
         return Database.tasks.stream().filter(task -> task.getId().equals(id)).findFirst().orElse(null);
     }
     public static Integer setId(){

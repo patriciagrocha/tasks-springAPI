@@ -24,6 +24,13 @@ public class TaskService {
         //tasks.stream().map(task -> new TaskDTO(task)).toList();
 
     }
+    public TaskDTO update(Integer id, TaskDTO taskDTO) {
+        Task task = Database.get(id);
+        task.setDescription(taskDTO.description());
+        task.setEndDate(taskDTO.endDate());
+        task.setStatus(taskDTO.status());
+        task.setPriority(taskDTO.priority());
 
-
+        return new TaskDTO(task);
+    }
 }
