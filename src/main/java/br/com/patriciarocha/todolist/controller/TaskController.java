@@ -30,13 +30,12 @@ public class TaskController {
 
     @GetMapping
     public ResponseEntity<List<TaskDTO>> list(){
-        List<Task> tasks = Database.listAll();
 
-        if(tasks.isEmpty())
+        List<TaskDTO> response = this.taskService.listAll();
+
+        if(response.isEmpty())
             return ResponseEntity.noContent().build();
 
-        List<TaskDTO> response = tasks.stream().map(TaskDTO::new).toList();
-        //List<TaskDTO> response = tasks.stream().map(task -> new TaskDTO(task)).toList();
         return ResponseEntity.ok(response);
     }
 }
