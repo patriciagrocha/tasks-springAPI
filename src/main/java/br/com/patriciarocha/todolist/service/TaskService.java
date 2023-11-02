@@ -33,4 +33,8 @@ public class TaskService {
 
         return new TaskDTO(task);
     }
+
+    public void delete(Integer id) {
+        Database.remove(id);
+    }
 }
